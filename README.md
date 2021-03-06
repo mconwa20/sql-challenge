@@ -14,11 +14,11 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 
 #### Data Modeling
 
-ERD of tables created in 
+ERD (ERD.png) created in LucidChart. Each table specifies columns, data type, foreign key/primary key.
 
 #### Data Engineering
 
-* Table schema were created in SQL. Data types, primary keys, foreign keys and other constraints were taken into account. Upon the creation of the tables (using the code in schemas.sql), I uploaded the corresponding CSV files to populate the tables.
+* Table schema were created in SQL (schemas.sql). Data types, primary keys, foreign keys and other constraints were taken into account. Upon the creation of the tables, I uploaded the corresponding CSV files to populate the tables.
 
 #### Data Analysis
 
