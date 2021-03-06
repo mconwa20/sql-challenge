@@ -11,16 +11,28 @@ CREATE TABLE departments (
 
 SELECT * FROM departments
 
+--titles: titles.csv table creation
+
+CREATE TABLE titles(
+	title_id INT,
+	title VARCHAR(20),
+	PRIMARY KEY (title_id)
+)
+
+SELECT * FROM titles
+
 --employees: employees.csv table creation
 
 CREATE TABLE employees(
 	emp_no INT,
+	emp_title_id VARCHAR,
 	birth_date DATE,
 	first_name VARCHAR(20),
 	last_name VARCHAR(20),
-	gender CHAR,
+	sex CHAR,
 	hire_date DATE,
 	PRIMARY KEY (emp_no)
+	FOREIGN KEY (emp_title_id) REFERENCES titles(title_id)
 );
 
 SELECT * FROM employees
@@ -58,13 +70,3 @@ CREATE TABLE salaries(
 );
 
 SELECT * FROM salaries
-
---titles: titles.csv table creation
-
-CREATE TABLE titles(
-	emp_no INT,
-	title VARCHAR(20),
-	FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
-)
-
-SELECT * FROM titles
